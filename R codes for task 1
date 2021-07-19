@@ -1,0 +1,9 @@
+students_data<-read.csv(file.choose())
+students_data
+plot(students_data,col='blue',pch=16)
+model<-lm(Scores~.,data=students_data)
+model
+abline(model,col='blue')
+#to predict the score if the student studies for 9.25 hours a day
+score_predicted=9.776*9.25+2.484
+score_predicted
